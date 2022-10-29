@@ -1,7 +1,6 @@
 from pymongo import MongoClient
 
-client = MongoClient('mongodb://localhost:27017/')
-
+client = MongoClient('mongodb://admin:password@mongodb-test:27017/?authSource=admin')
 db = client.links
 print("database",db)
 collection_name = db["links"]
